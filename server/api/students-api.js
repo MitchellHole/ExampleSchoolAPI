@@ -37,7 +37,7 @@ studentsRouter.post('/', keycloak.protect('principal'), bodyParser.json(), stude
  * Get all student
  * @route GET /students
  * @group Students - Operations about students
- * @returns {Array.<returnStudentModel>} 200 - A JSON object with all student info
+ * @returns {Array.<returnStudentModel>} 200 - A list of JSON objects with all student info
  * @security JWT
  */
 studentsRouter.get('/', keycloak.protect('principal'), bodyParser.json(), studentsController.getStudents);
