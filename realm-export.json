@@ -98,6 +98,14 @@
         "attributes": {}
       },
       {
+        "id": "f989a5b3-ac22-4beb-b28a-e614522b5ab9",
+        "name": "teacher",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "school_demo",
+        "attributes": {}
+      },
+      {
         "id": "a5f0b57b-c09b-47ee-ab50-774cc42461d1",
         "name": "student",
         "composite": false,
@@ -358,6 +366,14 @@
           "composite": false,
           "clientRole": true,
           "containerId": "281aee60-2501-4cba-a2f1-174fd37ae6f4",
+          "attributes": {}
+        },
+        {
+          "id": "00d5b94e-8446-4c98-9175-f0471a98da84",
+          "name": "teacher",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "00d5b94e-8446-4c98-9175-f0471a98da84",
           "attributes": {}
         },
         {
