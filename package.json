@@ -1,0 +1,39 @@
+{
+  "name": "exampleschoolapi",
+  "version": "1.0.0",
+  "description": "Example API for demoing API testing",
+  "engines": {
+    "node": ">=12.0.0",
+    "yarn": ">=1.15.*"
+  },
+  "scripts": {
+    "serve": "cd build-server && node server.js",
+    "start-server": "nodemon --exec babel-node server/server.js",
+    "test-server": "jest --config=server/jest.config.js /server --coverage",
+    "build-server": "babel ./server --out-dir build-server --ignore \"server/coverage\",\"server/**/*.test.js\",\"server/jest.config.js\",\"server/globalJestSetup.js\",\"server/globalJestTeardown.js\" --presets minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "keycloak-admin": "^1.14.18",
+    "keycloak-connect": "^14.0.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.9",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "5.21.10",
+    "sequelize-auto-migrations": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "babel-cli": "^6.26.0",
+    "express-swagger-generator": "^1.1.17",
+    "sequelize-cli": "5.5.1"
+  }
+}

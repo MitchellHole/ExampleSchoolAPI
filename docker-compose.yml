@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: pg_password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: school_demo
+    ports:
+      - '5432:5432'
+  keycloak:
+      image: quay.io/keycloak/keycloak:latest
+      environment:
+        DB_VENDOR: POSTGRES
+        DB_ADDR: db
+        DB_DATABASE: school_demo
+        DB_USER: postgres
+        DB_SCHEMA: public
+        DB_PASSWORD: pg_password
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: admin
+        # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+        #JDBC_PARAMS: "ssl=true"
+      ports:
+        - 8080:8080
+      depends_on:
+        - db
+  web:
+    image: mitch/example-school-api
+    depends_on:
+      - db
+      - keycloak
+    ports:
+      - '3000:9000'

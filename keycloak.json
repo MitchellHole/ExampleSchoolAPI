@@ -1,0 +1,7 @@
+{
+  "realm" : "school_demo",
+  "auth-server-url" : "http://keycloak:8080/auth",
+  "ssl-required" : "external",
+  "resource" : "school_demo_nodejs",
+  "public-client" : true
+}
