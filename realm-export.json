@@ -1,4 +1,27 @@
 {
+  "users": [
+    {
+      "username": "principal_user",
+      "enabled": true,
+      "email": "principal@user.com",
+      "firstName": "principal",
+      "lastName": "user",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "principal"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "principal"
+        ]
+      }
+    }
+  ],
   "id": "school_demo",
   "realm": "school_demo",
   "notBefore": 0,
