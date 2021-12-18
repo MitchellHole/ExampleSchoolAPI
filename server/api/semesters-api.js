@@ -18,6 +18,7 @@ const semestersRouter = express.Router();
 * @property {integer} id.required - id - eg: 10
 * @property {integer} year.required - semesters's year - eg: 2018
 * @property {integer} term.required - semester's term - eg: 2
+* @property {boolean} finalized.required - Has the semester been finalized - eg: false
 */
 
 /**
