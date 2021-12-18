@@ -20,7 +20,12 @@ const semestersController = {
       })
     }
 
-    db.semesters.create(req.body).then((data) => {
+    const newBody = {
+      finalized: false,
+      ...req.body
+    }
+    
+    db.semesters.create(newBody).then((data) => {
       return res.status(201).json(data);
     }).catch(error => {
       switch (error.name) {
@@ -30,6 +35,7 @@ const semestersController = {
       }
     })
   },
+
   getSemester: async (req, res) => {
     db.semesters.findOne({
       where: {id: req.params.id}

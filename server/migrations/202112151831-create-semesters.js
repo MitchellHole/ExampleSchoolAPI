@@ -14,6 +14,9 @@ module.exports = {
       term: {
         type: Sequelize.INTEGER,
         unique: 'fields_unique',
+      },
+      finalized: {
+        type: Sequelize.BOOLEAN
       }
     }, {
       uniqueKeys: {

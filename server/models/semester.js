@@ -3,7 +3,8 @@ const semesterModel = (sequelize, DataTypes) => {
     'semesters',
     {
       year: DataTypes.INTEGER,
-      term: DataTypes.INTEGER
+      term: DataTypes.INTEGER,
+      finalized: DataTypes.BOOLEAN
     },
     {timestamps: false},
   );
