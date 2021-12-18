@@ -4,26 +4,26 @@ import classRequests from './requests/classesRequest';
 
 const classesController = {
   createClass: async (req, res) => {
+    let requestCheck = classRequests.validateCreateClass(req)
+    if (requestCheck === "INVALID_BODY") {
+      return res.status(400).json({
+        "Name": "InvalidArguments",
+        "Message": "Missing body params"
+      })
+    }
+    else if (requestCheck === "INVALID_SUBJECT") {
+      return res.status(400).json({
+        "Name": "InvalidSubject",
+        "Message": "Invalid subject"
+      })
+    }
+    else if (requestCheck === "INVALID_GRADE") {
+      return res.status(400).json({
+        "Name": "InvalidArguments",
+        "Message": "Invalid grade"
+      })
+    }
     db.classes.create(req.body).then((data) => {
-      let requestCheck = classRequests.validateCreateClass(req)
-      if (requestCheck === "INVALID_BODY") {
-        return res.status(400).json({
-          "Name": "InvalidArguments",
-          "Message": "Missing body params"
-        })
-      }
-      else if (requestCheck === "INVALID_SUBJECT") {
-        return res.status(400).json({
-          "Name": "InvalidSubject",
-          "Message": "Invalid subject"
-        })
-      }
-      else if (requestCheck === "INVALID_GRADE") {
-        return res.status(400).json({
-          "Name": "InvalidArguments",
-          "Message": "Invalid grade"
-        })
-      }
       return res.status(201).json(data);
     }).catch(error => {
       switch (error.name) {
