@@ -1126,7 +1126,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"subject\": \"MATH\",\n    \"grade\": 12\n}",
+							"raw": "{\n    \"subject\": \"MATH\",\n    \"grade\": 9,\n    \"required\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"

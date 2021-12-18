@@ -3,7 +3,8 @@ const classModel = (sequelize, DataTypes) => {
     'classes',
     {
       subject: DataTypes.STRING,
-      grade: DataTypes.INTEGER
+      grade: DataTypes.INTEGER,
+      required: DataTypes.BOOLEAN
     },
     {timestamps: false},
   );

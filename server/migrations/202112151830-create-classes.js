@@ -14,6 +14,9 @@ module.exports = {
       grade: {
         type: Sequelize.INTEGER,
         unique: 'fields_unique',
+      },
+      required: {
+        type: Sequelize.BOOLEAN,
       }
     }, {
       uniqueKeys: {

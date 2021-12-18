@@ -11,6 +11,7 @@ const classesRouter = express.Router();
 * @typedef classModel
 * @property {string} subject.required - classes' subject - eg: BIO
 * @property {integer} grade.required - classes' grade level - eg: 11
+* @property {boolean} required.required - is class required for graduation - eg: true
 */
 
 /**
@@ -18,6 +19,7 @@ const classesRouter = express.Router();
 * @property {integer} id.required - id - eg: 10
 * @property {string} subject.required - classes' subject - eg: BIO
 * @property {integer} grade.required - classes' grade level - eg: 11
+* @property {boolean} required.required - is class required for graduation - eg: true
 */
 
 /**
