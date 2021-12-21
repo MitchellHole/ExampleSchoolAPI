@@ -39,6 +39,7 @@ const studentsController = {
       try {
         const user = await keycloakActions.createStudent(req)
         await keycloakActions.resetPassword(user)
+        await keycloakActions.addRoles(user)
       } catch (error) {
         return res.status(500).json({"Name": error.name, "Message": error.message})
       }

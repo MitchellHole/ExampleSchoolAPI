@@ -50,7 +50,7 @@ studentsRouter.get('/', keycloak.protect('principal'), bodyParser.json(), studen
  * @returns {Error}  404 - Student not found
  * @security JWT
  */
-studentsRouter.get('/:id', keycloak.protect(['principal', 'teacher', 'student']), bodyParser.json(), studentsController.getStudent);
+studentsRouter.get('/:id', keycloak.protect('principal'), bodyParser.json(), studentsController.getStudent);
 /**
  * Update a student
  * @route PUT /students/:id
