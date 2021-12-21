@@ -22,6 +22,7 @@ echo 127.0.0.1 keycloak >> /etc/hosts
 (ports 3000 & 8080 must be open on your localhost)
 
 ```bash
+docker build -t mitch/example-school-api .
 docker compose up -d
 ```
 

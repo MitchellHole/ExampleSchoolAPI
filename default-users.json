@@ -1,0 +1,439 @@
+{
+  "users": [
+    {
+      "username": "principal_user",
+      "enabled": true,
+      "email": "principal@user.com",
+      "firstName": "principal",
+      "lastName": "user",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "principal"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "principal"
+        ]
+      }
+    },
+    {
+      "username": "bethany_stanton",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "mark_smith",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "kim_cowan",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "soraya_maldonado",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "charis_vance",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "rhianne_cannon",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "francis_salt",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "antonio_ayers",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "katey_faulkner",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "callam_regan",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "sebastien_howell",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "rares_hobbs",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "aron_shepard",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "isabell_fraser",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "tyreke_orr",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "charly_howe",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "maggie_hull",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "elena_adams",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "lucille_newman",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "tim_smith",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "harris_dunlap",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "alberto_burks",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    },
+    {
+      "username": "ayman_monaghan",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [
+        "teacher"
+      ],
+      "clientRoles": {
+        "school_demo_nodejs": [
+          "teacher"
+        ]
+      }
+    }
+  ]
+}

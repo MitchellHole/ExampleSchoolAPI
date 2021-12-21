@@ -1,8 +1,6 @@
 import db from '../models';
-import kcAdminClient from './keycloak'
 import studentRequests from './requests/studentRequest';
-import createUser from "./keycloak";
-import resetPassword from "./keycloak";
+import keycloakActions from "./keycloak";
 const { Op } = require("sequelize");
 
 
@@ -39,15 +37,8 @@ const studentsController = {
       }
     }).then(async () => {
       try {
-        await kcAdminClient.auth({
-          username: 'admin',
-          password: 'admin',
-          grantType: 'password',
-          clientId: 'admin-cli'
-        });
-
-        const user = createUser(req)
-        resetPassword(user)
+        const user = await keycloakActions.createStudent(req)
+        await keycloakActions.resetPassword(user)
       } catch (error) {
         return res.status(500).json({"Name": error.name, "Message": error.message})
       }
@@ -72,9 +63,6 @@ const studentsController = {
         return res.status(404).json({"message": "Student not found."});
       }
       else if (req.kauth.grant.access_token.content.realm_access.roles.includes("student") && (student.student_number !== req.kauth.grant.access_token.content.student_number)) {
-        console.log(student.student_number)
-        console.log(req.kauth.grant.access_token.content.student_number)
-        console.log(req.kauth.grant.access_token.content.student_number === student.student_number)
         return res.status(403).json({"Name": "InvalidAccessError", "Message": "Not authorized to access this student"})
       }
       return res.status(200).json(student);
