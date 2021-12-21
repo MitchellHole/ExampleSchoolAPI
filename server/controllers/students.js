@@ -1,7 +1,8 @@
 import db from '../models';
 import kcAdminClient from './keycloak'
-import isNumeric from '../utils/studentHelpers';
 import studentRequests from './requests/studentRequest';
+import createUser from "./keycloak";
+import resetPassword from "./keycloak";
 const { Op } = require("sequelize");
 
 
@@ -29,7 +30,6 @@ const studentsController = {
 
     let response
     db.students.create(req.body).then((data) => {
-      //return res.status(201).json(data);
       response = data
     }).catch(error => {
       switch (error.name) {
@@ -37,35 +37,22 @@ const studentsController = {
               case 'SequelizeUniqueConstraintError': return res.status(409).json({"Name": error.name, "Message": error.errors[0].message});
               default: return res.status(500).json({"Message": "Unknown error"});
       }
+    }).then(async () => {
+      try {
+        await kcAdminClient.auth({
+          username: 'admin',
+          password: 'admin',
+          grantType: 'password',
+          clientId: 'admin-cli'
+        });
+
+        const user = createUser(req)
+        resetPassword(user)
+      } catch (error) {
+        return res.status(500).json({"Name": error.name, "Message": error.message})
+      }
+      return res.status(201).json(response);
     })
-
-    await kcAdminClient.auth({
-      username: 'admin',
-      password: 'admin',
-      grantType: 'password',
-      clientId: 'admin-cli'
-    });
-
-    const user = await kcAdminClient.users.create({
-      realm: 'school_demo',
-      username: req.body.name.split(" ").join("_"),
-      enabled: true,
-      attributes: {student_number: [req.body.student_number]}
-    });
-
-    await kcAdminClient.users.resetPassword({
-      realm: 'school_demo',
-      id: user.id,
-      credential: {
-        temporary: false,
-        type: 'password',
-        value: 'password',
-      },
-    });
-
-
-    return res.status(201).json(response);
-
   },
 
   getStudents: async (req, res) => {
